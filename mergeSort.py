@@ -32,3 +32,10 @@ def merge(left, right):
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
+
+# Test script to demonstrate the merge_sort function
+if __name__ == "__main__":
+    sample_list = [38, 27, 43, 3, 9, 82, 10]
+    sorted_list = merge_sort(sample_list)
+    print(f"Sorted list: {sorted_list}")
