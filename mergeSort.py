@@ -1,11 +1,11 @@
-def merge_Sort(arr):
+def merge_sort(arr):
     if len(arr) <= 1:  # Base case for recursion
         return arr
     mid = len(arr) // 2  # Find the middle index
 
     # Recursively sort the left and right halves
-    left_side = merge_Sort(arr[:mid])
-    right_side = merge_Sort(arr[mid:])
+    left_side = merge_sort(arr[:mid])
+    right_side = merge_sort(arr[mid:])
 
     # Merge the sorted halves
     return merge(left_side, right_side)
