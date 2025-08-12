@@ -17,7 +17,7 @@ def karatsuba(x, y):
     # 3 recursive calls to the Karatsuba algorithm
     z_0 = karatsuba(a, c)  # ac
     z_1 = karatsuba(b, d)  # bd
-    z_2 = karatsuba(a + b, c + d)  # ad + bc
+    z_2 = karatsuba(a + b, c + d)  # (a+b)(c+d)
 
     # combine the results into karatsubas equation
     return z_0 * 10 ** (2 * m) + ((z_2 - z_1 - z_0) * 10**m) + z_1
