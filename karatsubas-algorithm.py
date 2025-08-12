@@ -21,3 +21,37 @@ def karatsuba(x, y):
 
     # combine the results into karatsubas equation
     return z_0 * 10 ** (2 * m) + ((z_2 - z_1 - z_0) * 10**m) + z_1
+
+
+# Test script to demonstrate the karatsuba function
+if __name__ == "__main__":
+
+    # assigning large 64 digit numbers for testing
+    num1 = 3141592653589793238462643383279502884197169399375105820974944592
+    num2 = 2718281828459045235360287471352662497757247093699959574966967627
+
+    # assigning test cases
+    test_cases = [
+        (1234, 5678),
+        (123456789, 987654321),
+        (0, 1234),
+        (1234, 0),
+        (num1, num2),
+    ]
+
+print("-----Karatsuba Multiplication Results-----")
+
+# Compare results with Python's built-in multiplication
+for x, y in test_cases:
+    result = karatsuba(x, y)
+    python_version = x * y  # Python's built-in multiplication for comparison
+
+    print(f"Testing {x} * {y}:")
+
+    print(f"Karatsuba result: {result}")
+    print(f"Python result: {python_version}")
+
+    if result == python_version:
+        print("PASS ✅\n")
+    else:
+        print("FAIL ❌\n")
