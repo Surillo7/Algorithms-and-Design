@@ -1,14 +1,18 @@
 def sort_and_count(arr):
     if len(arr) <= 1:  # Base case for recursion
-        return arr
+        return arr, 0
     mid = len(arr) // 2  # Find the middle index
 
-    # Recursively sort the left and right halves
-    left_side = sort_and_count(arr[:mid])
-    right_side = sort_and_count(arr[mid:])
+    # Recursively sort the left and right halves, and
+    # count inversions in each half
+    left_side, left_count = sort_and_count(arr[:mid])
+    right_side, right_count = sort_and_count(arr[mid:])
+    # Merge the sorted halves and count inversions
+    merged_array, split_count = merge_and_count(left_side, right_side)
+    # add the counts from both halves and the split count
+    total_count = left_count + right_count + split_count
 
-    # Merge the sorted halves
-    return merge_and_count(left_side, right_side)
+    return merged_array, total_count
 
 
 def merge_and_count(left, right):
