@@ -37,5 +37,11 @@ def merge(left, right):
 # Test script to demonstrate the merge_sort function
 if __name__ == "__main__":
     sample_list = [38, 27, 43, 3, 9, 82, 10]
+    sample_list2 = ["car", "apple", "banana", "date"]
     sorted_list = merge_sort(sample_list)
+    sorted_list2 = merge_sort(sample_list2)
+    print("-----Merge Sort Results-----")
+    print(f"Original list: {sample_list}")
     print(f"Sorted list: {sorted_list}")
+    print(f"Original list: {sample_list2}")
+    print(f"Sorted list: {sorted_list2}")
