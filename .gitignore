@@ -1,3 +1,30 @@
 venv/
 __pycache__/
 *.pyc
+
+# VS Code settings
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+
+# macOS system files
+.DS_Store
+
+# Log files
+*.log
+
+# Test and coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
