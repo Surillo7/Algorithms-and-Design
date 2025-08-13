@@ -46,5 +46,6 @@ def merge_and_count(left, right):
 if __name__ == "__main__":
     sample_list = [38, 27, 43, 3, 9, 82, 10]
     sorted_list, inversions = sort_and_count(sample_list)
+    print(f"Original list: {sample_list}")
     print(f"Sorted list: {sorted_list}")
     print(f"Number of inversions: {inversions}")
