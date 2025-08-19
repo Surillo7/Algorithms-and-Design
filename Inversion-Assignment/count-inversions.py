@@ -43,21 +43,25 @@ def merge_and_count(left, right):
 
 
 def read_integer_file(filename):
-    """
-    Reads a file with one integer per line and returns a list of integers.
-    """
+    # Reads a file with one integer per line and
+    # returns a list of integers.
     numbers = []
     with open(filename) as f:
         for line in f:
-            # .strip() removes whitespace/newlines, int() converts the string to a number.
+            # .strip() removes whitespace/newlines,
+            # int() converts the string to a number.
             numbers.append(int(line.strip()))
     return numbers
 
 
 # Test script to demonstrate the merge_sort function
 if __name__ == "__main__":
-    sample_list = [38, 27, 43, 3, 9, 82, 10]
-    sorted_list, inversions = sort_and_count(sample_list)
-    print(f"Original list: {sample_list}")
-    print(f"Sorted list: {sorted_list}")
-    print(f"Number of inversions: {inversions}")
+    input_file = "IntegerArray.txt"
+
+    print(f"Reading integers from {input_file}...")
+    numbers = read_integer_file(input_file)
+
+    print("Counting inversions... ")
+    sorted_numbers, inversion_count = sort_and_count(numbers)
+
+    print(f"Number of inversions: {inversion_count}")
