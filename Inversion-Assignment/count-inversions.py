@@ -56,7 +56,8 @@ def read_integer_file(filename):
 
 # Test script to demonstrate the merge_sort function
 if __name__ == "__main__":
-    input_file = "IntegerArray.txt"
+
+    input_file = "/Users/king/Programming/ResumeRepo/AI-Specialization/Algorithms-and-Design/Inversion-Assignment/IntegerArray.txt"
 
     print(f"Reading integers from {input_file}...")
     numbers = read_integer_file(input_file)
