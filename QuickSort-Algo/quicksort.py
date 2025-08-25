@@ -16,9 +16,9 @@ def partition(arr, low, high):
 
     # Loop through the array
     for j in range(low, high):
-        if arr[j] < pivot:  # compare value with pivot
+        if arr[j] <= pivot:  # compare value with pivot
             i += 1  # increment boundary position
             arr[i], arr[j] = arr[j], arr[i]  # swap elements
-            # swap pivot with boundary
-            arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    # swap pivot with boundary
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1  # Return the final position of the pivot
